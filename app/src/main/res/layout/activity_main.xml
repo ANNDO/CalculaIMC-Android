@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/seekbaraltura"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minWidth="100dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:text="Altura (m)"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/txvPeso"
+        app:layout_constraintEnd_toEndOf="@+id/skbAltura"
+        app:layout_constraintStart_toStartOf="@+id/skbAltura"
+        app:layout_constraintTop_toBottomOf="@+id/skbAltura" />
+
+    <SeekBar
+        android:id="@+id/skbAltura"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:indeterminate="false"
+        android:max="130"
+        android:progress="1"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvAltura" />
+
+    <TextView
+        android:id="@+id/txvAltura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32sp"
+        android:layout_marginBottom="16dp"
+        android:text="valor altura"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/skbAltura"
+        app:layout_constraintEnd_toEndOf="@+id/skbAltura"
+        app:layout_constraintStart_toStartOf="@+id/skbAltura"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/skbPeso"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:indeterminate="false"
+        android:max="800"
+        android:progress="1"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvPeso" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Peso (kg)"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnMostrarIMC"
+        app:layout_constraintEnd_toEndOf="@+id/skbPeso"
+        app:layout_constraintStart_toStartOf="@+id/skbPeso"
+        app:layout_constraintTop_toBottomOf="@+id/skbPeso" />
+
+    <TextView
+        android:id="@+id/txvPeso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:text="valor peso"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/skbPeso"
+        app:layout_constraintEnd_toEndOf="@+id/skbPeso"
+        app:layout_constraintStart_toStartOf="@+id/skbPeso"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/btnMostrarIMC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:text="Mostrar IMC"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
